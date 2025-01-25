@@ -108,6 +108,10 @@ footer {
 }
 
 @media (max-width: 500px) {
+  header {
+    padding: 1rem 0.5rem;
+  }
+
   header nav ul {
     gap: 0.5rem;
   }
