@@ -214,6 +214,10 @@ section {
 }
 
 @media (max-width: 500px) {
+  header {
+    padding: 1.5rem 1rem 1rem;
+  }
+
   .register {
     padding: 1rem;
   }

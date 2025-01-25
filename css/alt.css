@@ -13,7 +13,7 @@ body {
 
 header {
   color: #007bff;
-  padding: 20px;
+  padding: 5px;
 }
 
 ul {
@@ -40,6 +40,8 @@ table {
   margin: 20px auto;
   border-collapse: collapse;
   background-color: #fff;
+
+  border: 1px solid red;
 }
 
 th,
@@ -61,4 +63,10 @@ td {
 footer {
   margin-top: 20px;
   padding: 10px;
+}
+
+@media (max-width: 500px) {
+  table {
+    width: 100%;
+  }
 }
