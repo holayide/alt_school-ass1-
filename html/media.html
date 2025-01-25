@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/alt.css" />
+    <title>Media</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    picture img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border-radius: 10px;
+    }
+
+    video {
+      width: 50%;
+      height: 400px;
+      margin-top: 20px;
+    }
+
+    audio,
+    iframe {
+      max-width: 100%;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+  </style>
+  <body>
+    <div class="container wrapper">
+      <header>
+        <h1>Media Element in Html</h1>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./table.html">Table</a></li>
+            <li class="active"><a href="./media.html">Media</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <!-- picture -->
+        <picture>
+          <source
+            srcset="../assets/images/girl.jpg"
+            media="(min-width: 1024px)"
+          />
+          <source
+            srcset="../assets/images/music.jpg"
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="../assets/images/flower.jpg"
+            media="(max-width: 767px)"
+          />
+          <img src="../assets/images/flower.jpg" alt="A representation of me" />
+        </picture>
+
+        <!-- Video Element -->
+        <!-- <div style="height: 400px"> -->
+        <video controls poster="../assets/images/flower.jpg">
+          <source src="../assets/video/awo.mp4" type="video/mp4" />
+          <source src="../assets/video/awo.webm" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+        <!-- </div> -->
+
+        <!-- Audio Element -->
+        <audio controls>
+          <source
+            src="https://www.w3schools.com/html/horse.mp3"
+            type="audio/mpeg"
+          />
+          <source
+            src="https://www.w3schools.com/html/horse.ogg"
+            type="audio/ogg"
+          />
+          Your browser does not support the audio element.
+        </audio>
+
+        <!-- iframe -->
+        <iframe
+          src="https://www.yourportfolio.com"
+          width="100%"
+          height="400"
+          frameborder="0"
+        ></iframe>
+      </main>
+    </div>
+  </body>
+</html>

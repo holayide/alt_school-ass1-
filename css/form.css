@@ -1,0 +1,233 @@
+@font-face {
+  font-family: almarena;
+  src: url(../assets/fonts/almarena/almarenaneue-regular.otf);
+}
+
+@font-face {
+  font-family: euclidBold;
+  src: url(../assets/fonts/euclid/Euclid\ Circular\ A\ Bold.ttf);
+}
+
+@font-face {
+  font-family: euclidSemiBold;
+  src: url(../assets/fonts/euclid/Euclid\ Circular\ A\ SemiBold.ttf);
+}
+
+@font-face {
+  font-family: euclidMedium;
+  src: url(../assets/fonts/euclid/Euclid\ Circular\ A\ Medium.ttf);
+}
+
+@font-face {
+  font-family: euclidRegular;
+  src: url(../assets/fonts/euclid/Euclid\ Circular\ A\ Regular.ttf);
+}
+
+:root {
+  --primary: #8272f0;
+  --head-font: almarena;
+  --euclid-bold: euclidBold;
+  --euclid-semi: euclidSemiBold;
+  --euclid-medium: euclidMedium;
+  --euclid-regular: euclidRegular;
+}
+
+body {
+  font-family: var(--euclid-regular);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 2rem;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav ul li a:visited,
+nav ul li a:link {
+  color: inherit;
+  transition: all 0.3s ease-in;
+}
+
+nav ul li a:active,
+nav ul li a:hover {
+  color: blue;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.scholar {
+  padding: 2rem;
+  text-align: center;
+}
+
+.inner-scholar {
+  width: 100%;
+  max-width: 37.5rem;
+  margin: auto;
+}
+
+.scholar-img img {
+  width: 100%;
+}
+
+.inner-scholar h2 {
+  font-family: var(--head-font);
+  font-size: 2.5rem;
+  line-height: 1.2;
+  letter-spacing: 0.1rem;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  gap: 0.5rem;
+  margin: 3rem 0 1.5rem;
+}
+
+.inner-scholar p {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* right */
+.register {
+  padding: 2rem;
+}
+
+.register__sigin-in {
+  text-align: right;
+  margin-bottom: 0.3rem;
+  font-family: var(--euclid-semi);
+}
+
+.register__sigin-in a {
+  color: var(--primary);
+}
+
+.register__title {
+  font-family: var(--head-font);
+  font-size: 2.25rem;
+  line-height: 1.2;
+}
+
+.register__note {
+  color: #718096;
+  font-size: 1rem;
+  margin: 0.5rem 0 2rem;
+}
+
+.regular__inner-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.regular__inner-form > div:last-child:last-of-type {
+  grid-column: span 2;
+}
+
+.regular__inner-form label {
+  display: block;
+  color: #1a202c;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.regular__inner-form input,
+.regular__inner-form select {
+  width: 100%;
+  padding: 0 1rem;
+  height: 2.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  outline: none;
+}
+
+.regular__inner-form input:focus,
+.regular__inner-form select:focus {
+  border: 2px solid var(--primary);
+}
+
+.regular__inner-form input::placeholder {
+  font-family: var(--euclid-medium);
+}
+
+.regular__form > p {
+  margin: 2rem 0;
+  color: #718096;
+  line-height: 1.5;
+}
+
+.regular__form > p a {
+  color: var(--primary);
+}
+
+.regular__form > button {
+  width: 100%;
+  user-select: none;
+  font-size: 0.875rem;
+  padding: 1rem 0;
+  background-color: var(--primary);
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 0.375rem;
+}
+
+.regular__form > button:hover {
+  background-color: #8f80f2;
+}
+
+@media (min-width: 1439px) {
+  .register__wrapper {
+    padding: 0 4rem;
+  }
+
+  .inner-scholar h2 {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+  }
+}
+
+@media (max-width: 988px) {
+  .scholar {
+    display: none;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .register {
+    padding: 1rem;
+  }
+
+  .register__sigin-in {
+    text-align: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .regular__inner-form {
+    grid-template-columns: 1fr;
+  }
+
+  .regular__inner-form > div:last-child:last-of-type {
+    grid-column: span 1;
+  }
+}
